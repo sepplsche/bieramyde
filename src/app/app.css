@@ -1,0 +1,162 @@
+/* ---- Layout ---- */
+.seite {
+  min-height: 100vh;
+  background-color: #1a1008;
+  color: #f5e6c8;
+  font-family: Georgia, 'Times New Roman', serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- Header ---- */
+header {
+  background: linear-gradient(135deg, #4a2000, #7a3800);
+  padding: 2rem;
+  border-bottom: 3px solid #c8860a;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+}
+
+.logo-bereich {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.logo-symbol {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.6rem;
+  letter-spacing: 0.08em;
+  color: #f5c842;
+  text-shadow: 1px 2px 4px rgba(0,0,0,0.6);
+}
+
+.untertitel {
+  margin: 0.2rem 0 0;
+  font-style: italic;
+  color: #d4a85a;
+  font-size: 1rem;
+}
+
+/* ---- Main ---- */
+main {
+  flex: 1;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.einleitung {
+  text-align: center;
+  font-style: italic;
+  color: #c8a06a;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+/* ---- Bierkarte Grid ---- */
+.karte {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ---- Einzelne Bierkarte ---- */
+.bier-karte {
+  background: #2a1505;
+  border: 1px solid #5a3010;
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.bier-karte:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  border-color: #c8860a;
+}
+
+.bier-kopf {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.bier-name {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #f5c842;
+}
+
+.brauerei {
+  margin: 0.2rem 0 0;
+  font-size: 0.85rem;
+  color: #a07840;
+  font-style: italic;
+}
+
+.stil-badge {
+  background: #4a2000;
+  border: 1px solid #7a4010;
+  color: #d4a85a;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.beschreibung {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #c8a06a;
+  flex: 1;
+}
+
+.bier-fuss {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #3a1a05;
+  padding-top: 0.7rem;
+  margin-top: 0.2rem;
+}
+
+.alkohol {
+  font-size: 0.85rem;
+  color: #a07840;
+}
+
+.preis {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #f5c842;
+}
+
+/* ---- Footer ---- */
+footer {
+  text-align: center;
+  padding: 1.2rem;
+  border-top: 1px solid #3a1a05;
+  font-size: 0.85rem;
+  color: #6a4820;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 500px) {
+  h1 { font-size: 2rem; }
+  .karte { grid-template-columns: 1fr; }
+}

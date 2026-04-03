@@ -1,0 +1,43 @@
+<div class="seite">
+
+  <header>
+    <div class="logo-bereich">
+      <span class="logo-symbol">&#127866;</span>
+      <div>
+        <h1>Bieramyde</h1>
+        <p class="untertitel">Die fränkische Bierkarte</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <p class="einleitung">
+      Franken ist das Bierland schlechthin — über 200 Brauereien auf engstem Raum,
+      jede mit ihrer eigenen Handschrift. Hier findest du eine Auswahl der besten fränkischen Biere.
+    </p>
+
+    <div class="karte">
+      @for (bier of biere; track bier.name) {
+        <div class="bier-karte">
+          <div class="bier-kopf">
+            <div>
+              <h2 class="bier-name">{{ bier.name }}</h2>
+              <p class="brauerei">{{ bier.brauerei }}, {{ bier.ort }}</p>
+            </div>
+            <span class="stil-badge">{{ bier.stil }}</span>
+          </div>
+          <p class="beschreibung">{{ bier.beschreibung }}</p>
+          <div class="bier-fuss">
+            <span class="alkohol">{{ bier.alkohol }} vol.</span>
+            <span class="preis">{{ bier.preis }}</span>
+          </div>
+        </div>
+      }
+    </div>
+  </main>
+
+  <footer>
+    <p>Prost! &mdash; Alle Preise inkl. MwSt. &middot; Solange der Vorrat reicht.</p>
+  </footer>
+
+</div>
